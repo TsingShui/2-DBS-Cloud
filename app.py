@@ -1,17 +1,10 @@
-# %%
+
 from flask import Flask
 from flask import request
 from flask import render_template
 
-# %%
 import joblib
 app = Flask(__name__)
-
-# %% [markdown]
-#
-
-# %%
-
 @app.route('/',methods=['POST','GET'])
 def root():
     if request.method =='POST':
@@ -25,9 +18,4 @@ def root():
         return (render_template("index.html",result1=r1,result2=r2))
     else:
         return (render_template("index.html",result1="Waiting",result2="Waiting"))
-
-
-
-
-# %%
 app.run()
