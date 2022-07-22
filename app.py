@@ -18,4 +18,4 @@ def root():
         return (render_template("index.html",result1=r1,result2=r2))
     else:
         return (render_template("index.html",result1="Waiting",result2="Waiting"))
-app.run()
+
